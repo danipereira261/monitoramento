@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Slf4j
@@ -23,5 +25,11 @@ public class MonitoramentoController {
     @ResponseStatus(HttpStatus.OK)
     public void save(@RequestBody MonitoramentoDTO monitoramentoDTO) {
         monitoramentoService.save(monitoramentoDTO);
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<MonitoramentoDTO> findAll() {
+        return monitoramentoService.findAll();
     }
 }

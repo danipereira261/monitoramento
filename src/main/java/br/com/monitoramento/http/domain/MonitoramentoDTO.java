@@ -1,5 +1,6 @@
 package br.com.monitoramento.http.domain;
 
+import br.com.monitoramento.database.entity.MonitoramentoEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,4 +19,8 @@ public class MonitoramentoDTO {
     private PessoaDTO pessoa;
     private EnderecoDTO endereco;
     private DoencaDTO doenca;
+
+    public MonitoramentoDTO(MonitoramentoEntity monitoramentoEntity) {
+
+    }
 }
