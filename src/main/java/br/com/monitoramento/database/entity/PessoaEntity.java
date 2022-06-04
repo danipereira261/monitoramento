@@ -23,6 +23,9 @@ public class PessoaEntity {
     @Column(name = "ID")
     private long id;
 
+    @Column(name = "CPF")
+    private String cpf;
+
     @Column(name = "SEXO")
     @Enumerated(EnumType.STRING)
     private Sexo sexo;

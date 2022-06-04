@@ -1,5 +1,6 @@
 package br.com.monitoramento.database.entity;
 
+import br.com.monitoramento.enums.Estado;
 import br.com.monitoramento.enums.Regiao;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,7 +35,8 @@ public class EnderecoEntity {
     private String municipio;
 
     @Column(name = "ESTADO")
-    private String estado;
+    @Enumerated(EnumType.STRING)
+    private Estado estado;
 
     @Column(name = "UF")
     private String uf;

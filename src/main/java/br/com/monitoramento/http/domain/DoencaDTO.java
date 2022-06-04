@@ -14,5 +14,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class DoencaDTO {
 
+    @Enumerated(EnumType.STRING)
     private Doenca doenca;
 }

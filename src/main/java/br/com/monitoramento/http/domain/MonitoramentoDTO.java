@@ -18,5 +18,4 @@ public class MonitoramentoDTO {
     private PessoaDTO pessoa;
     private EnderecoDTO endereco;
     private DoencaDTO doenca;
-    private LocalDateTime dataRegistro;
 }
