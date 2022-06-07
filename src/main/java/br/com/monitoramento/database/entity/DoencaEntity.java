@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -24,4 +25,7 @@ public class DoencaEntity {
     @Column(name = "doenca")
     @Enumerated(EnumType.STRING)
     private Doenca doenca;
+
+    @Column(name = "DT_DOENCA")
+    private LocalDate dataDoenca;
 }

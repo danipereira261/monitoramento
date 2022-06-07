@@ -10,6 +10,7 @@ public class BuildDoenca {
     public DoencaEntity convertDoencaToEntity(DoencaDTO dto) {
         return DoencaEntity
                 .builder()
+                .dataDoenca(dto.getDataDoenca())
                 .doenca(dto.getDoenca())
                 .build();
     }
@@ -18,6 +19,7 @@ public class BuildDoenca {
         return DoencaDTO
                 .builder()
                 .doenca(entity.getDoenca())
+                .dataDoenca(entity.getDataDoenca())
                 .build();
     }
 }
