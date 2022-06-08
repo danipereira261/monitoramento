@@ -1,6 +1,7 @@
 package br.com.monitoramento.http.domain;
 
 import br.com.monitoramento.enums.Doenca;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +19,8 @@ public class DoencaDTO {
 
     @Enumerated(EnumType.STRING)
     private Doenca doenca;
-    @ApiModelProperty(example = "10/10/1985")
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+    @ApiModelProperty(example = "01/01/2022")
     private LocalDate dataDoenca;
 }

@@ -21,9 +21,11 @@ public class PessoaDTO {
 
     @Enumerated(EnumType.STRING)
     private Sexo sexo;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     @ApiModelProperty(example = "10/10/1985")
     private LocalDate dataNascimento;
+
     @ApiModelProperty(example = "1000")
     private BigDecimal rendaFamiliar;
     private String cpf;
